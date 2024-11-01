@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- This is our beans-->
+    <!--    <bean class="org.example.Student" name="student1">-->
+    <!--        <property name="studentId">-->
+    <!--            <value>22334</value>-->
+    <!--        </property>-->
+    <!--        <property name="studentName">-->
+    <!--            <value>Navjot singh is a student</value>-->
+    <!--        </property>-->
+    <!--        <property name="studentAddress">-->
+    <!--            <value>Delhi</value>-->
+    <!--        </property>-->
+    <!--    </bean>-->
+    <bean class="org.example.Student" name="student1">
+        <property name="studentId" value="123"/>
+        <property name="studentName" value="Navjot singh"/>
+        <property name="studentAddress" value="metropolis city rudrapur"/>
+        <property name="studentList">
+            <list>
+                <value>Navjot singh</value>
+                <value>avtaar singh</value>
+                <value>Parvinder singh</value>
+            </list>
+        </property>
+        <property name="experience">
+            <map>
+                <entry key="1" value="Navjot singh"/>
+                <entry key="2" value="avtaar singh"/>
+                <entry key="3" value="Parvinder singh"/>
+            </map>
+        </property>
+        <property name="phoneNumbers">
+            <set>
+                <value>1234567890</value>
+                <value>123456780</value>
+                <value>12345680</value>
+            </set>
+        </property>
+    </bean>
+
+    <!--    <bean class="org.example.Student" name="student2">-->
+    <!--        <property name="studentId" value="1233"/>-->
+    <!--        <property name="studentName" value="Aprvinder singh"/>-->
+    <!--        <property name="studentAddress" value="Canada"/>-->
+    <!--    </bean>-->
+    <bean class="org.example.Student" name="student2" p:studentId="1234" p:studentName="parvinder"
+          p:studentAddress="DAVID OFF"/>
+
+<!--    properties props -->
+</beans>
