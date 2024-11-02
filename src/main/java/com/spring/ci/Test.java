@@ -7,6 +7,8 @@ public class Test {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("constructorInjectionConfig.xml");
         Person p = (Person) context.getBean("cnst");
-        System.out.println("This is the person object"+ p);
+        Addition add = (Addition) context.getBean("add");
+        add.doSum();
+        System.out.println("This is the person object" + p);
     }
 }

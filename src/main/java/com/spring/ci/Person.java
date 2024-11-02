@@ -4,14 +4,10 @@ public class Person {
     private int personId;
     private String name;
     private int age;
+    private Certi certi;
 
     public Person(){
         super();
-    }
-    public Person(int personId, String name ,int age) {
-        this.personId = personId;
-        this.name = name;
-        this.age=age;
     }
 
     @Override
@@ -19,7 +15,16 @@ public class Person {
         return "Person{" +
                 "personId=" + personId +
                 ", name='" + name + '\'' +
-                ", age='"+ age + '\''+
+                ", age=" + age +
+                ", certi=" + certi +
                 '}';
     }
+
+    public Person(int personId, String name , int age, Certi certi) {
+        this.personId = personId;
+        this.name = name;
+        this.age=age;
+        this.certi=certi;
+    }
+
 }

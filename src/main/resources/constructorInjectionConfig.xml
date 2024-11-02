@@ -3,16 +3,30 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
           http://www.springframework.org/schema/beans/spring-beans.xsd
           http://www.springframework.org/schema/context
            http://www.springframework.org/schema/context/spring-context.xsd">
 
+<!--    <bean class="com.spring.ci.Certi" name="cert">-->
+<!--        <constructor-arg value="Interhouse volleyball"/>-->
+<!--    </bean>-->
+    <bean class="com.spring.ci.Certi" name="cert" c:name="interhouse volleyball"/>
     <bean class="com.spring.ci.Person" name="cnst">
         <constructor-arg>
             <value type="int">10</value>
         </constructor-arg>
-        <constructor-arg value="navjot singh" type="String"/>
         <constructor-arg value="23" type="int"/>
+        <constructor-arg value="Navjot singh" type="String"/>
+        <constructor-arg ref="cert"/>
+    </bean>
+    <bean class="com.spring.ci.Addition" name="add">
+        <constructor-arg value="12"/>
+        <constructor-arg value="24"/>
+    </bean>
+    <bean class="com.spring.ci.Addition" name="amb">
+        <constructor-arg value="12" />
+        <constructor-arg value="24"/>
     </bean>
 </beans>
